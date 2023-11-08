@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Set a vibrant background color for the entire page */
+body {
+  background-color: #0c0c0b; /* You can change the color to your liking */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+/* Style for the game container */
+.game {
+  text-align: center;
+  background-color: #2a4c4e;
+  border-radius: 0px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style for the game title */
+h1 {
+  position:relative;
+  font-size: 4rem;
+  color: #370202; /* You can change the color to your liking */
+  margin-bottom: 20px;
 }
+
+/* Style for the game board */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 50px); /* Adjust the column size as needed */
+  grid-template-rows: repeat(3, 50px); /* Adjust the row size as needed */
+  background-color: #093246; /* You can change the color to your liking */
+  padding: 40px;
+  gap: 0;
+}
+
+.square {
+  font-size: 2rem; /* Reducing the font size */
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Adjust the width to match the column size */
+  height: 50px; /* Adjust the height to match the row size */
+  background-color: #333; /* You can change the color to your liking */
+  color: #0b0a0a;
+  border: 1px solid #000000; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  left: 100px;
+  top: -0.5cm;
+}
+
+.square:hover {
+  background-color: #242d32; /* You can change the color to your liking */
+}
+
+/* Style for game status */
+.status {
+  font-size: 1rem;
+  display: flex;
+  color: #e67e22; /* You can change the color to your liking */
+  margin-bottom: 1px;
+  position: relative;
+  top: -10px;
+}
+
+/* Style for the game info (moves list) */
+.game-info {
+  margin-top: 20px;
+}
+
+/* Style for the list of moves */
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style for individual move buttons */
+li {
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #d35400; /* You can change the color to your liking */
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e74c3c; /* You can change the color to your liking */
+}
+/* ... Your existing CSS rules ... */
+
+/* Style for the next player */
+
+
